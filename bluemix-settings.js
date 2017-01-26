@@ -45,7 +45,9 @@ var settings = module.exports = {
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
 
-    functionGlobalContext: { },
+    functionGlobalContext: {
+        twilio: require('twilio')('AC0d0a66764ed2f144a626c3532e467151', '12b49e835410284c3dad3cdad6f3e160')
+    },
 
     storageModule: require("./couchstorage")
 };
